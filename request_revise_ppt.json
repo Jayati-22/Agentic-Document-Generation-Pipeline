@@ -1,0 +1,19 @@
+{
+  "jsonrpc": "2.0",
+  "id": "2",
+  "method": "message/send",
+  "params": {
+    "message": {
+      "kind": "message",
+      "messageId": "msg-002",
+      "contextId": "session-001",
+      "role": "user",
+      "parts": [
+        {
+          "kind": "text",
+          "text": "Change slide 4 to be about dark vs milk chocolate"
+        }
+      ]
+    }
+  }
+}

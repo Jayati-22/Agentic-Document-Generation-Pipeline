@@ -1,0 +1,19 @@
+{
+  "jsonrpc": "2.0",
+  "id": "3",
+  "method": "message/send",
+  "params": {
+    "message": {
+      "kind": "message",
+      "messageId": "msg-003",
+      "contextId": "session-001",
+      "role": "user",
+      "parts": [
+        {
+          "kind": "text",
+          "text": "Create a presentation on chocolates for a school project, covering types, health benefits and how it's made"
+        }
+      ]
+    }
+  }
+}

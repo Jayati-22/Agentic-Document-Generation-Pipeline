@@ -1,0 +1,25 @@
+[project]
+name = "nasiko-interactive-document-agent"
+version = "0.2.0"
+description = "Agentic Document Creator with Interactive Feedback Loop"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "a2a-sdk[http-server]>=0.3.0,<1.0",
+    "click>=8.1.8",
+    "httpx>=0.28.1",
+    "openai>=1.57.0",
+    "pydantic>=2.11.4",
+    "python-dotenv>=1.1.0",
+    "uvicorn>=0.34.2",
+    "python-pptx",
+    "openpyxl",
+    "requests",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

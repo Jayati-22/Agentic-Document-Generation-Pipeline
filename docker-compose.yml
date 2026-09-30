@@ -1,0 +1,39 @@
+# services:
+#   nasiko-document-agent:
+#     build: .
+#     container_name: nasiko-document-agent
+#     environment:
+#       - OPENAI_API_KEY=
+#       - PEXELS_API_KEY=
+#     stdin_open: true
+#     ports:
+#       - "5000:5000"
+#     volumes:
+#       - ./outputs:/app/outputs   # <-- ADD THESE TWO LINES
+#     tty: true
+#     networks:
+#       - agents-net
+
+# networks:
+#   agents-net:
+#     external: false
+
+services:
+  nasiko-document-agent:
+    build: .
+    container_name: nasiko-document-agent
+    # Keys come from a local .env file (never commit it):
+    #   OPENAI_API_KEY=sk-...
+    #   PEXELS_API_KEY=...
+    env_file:
+      - .env
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./outputs:/app/outputs
+    networks:
+      - agents-net
+
+networks:
+  agents-net:
+    external: false

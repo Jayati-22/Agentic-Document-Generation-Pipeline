@@ -1,0 +1,19 @@
+{
+  "jsonrpc": "2.0",
+  "id": "1",
+  "method": "message/send",
+  "params": {
+    "message": {
+      "kind": "message",
+      "messageId": "msg-001",
+      "contextId": "session-001",
+      "role": "user",
+      "parts": [
+        {
+          "kind": "text",
+          "text": "tracker of nvidea sales"
+        }
+      ]
+    }
+  }
+}
